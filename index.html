@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heba Metwally | Generative AI for Work & Research Portfolio</title>
+  <style>
+    :root {
+      --primary: #1e40af; /* indigo‑800 */
+      --secondary: #fbbf24; /* amber‑400 */
+      --light: #f9fafb; /* gray‑50 */
+      --dark: #111827; /* gray‑900 */
+      --muted: #6b7280; /* gray‑500 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+        sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* ——— NAVBAR ——— */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffffcc; /* translucent white */
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 1000;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 0.95rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* ——— HERO ——— */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      background: radial-gradient(
+          circle at 25% 30%,
+          rgba(251, 191, 36, 0.3) 0%,
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 75% 70%,
+          rgba(30, 64, 175, 0.35) 0%,
+          transparent 40%
+        ),
+        var(--light);
+    }
+    .hero h1 {
+      font-size: clamp(2.25rem, 4vw + 1rem, 4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 800px;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 640px;
+      margin-bottom: 2rem;
+      color: var(--muted);
+      font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    }
+    .cta-btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 9999px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+    .cta-btn:hover {
+      background: #1e3a8a; /* darker indigo */
+    }
+
+    /* ——— SECTIONS ——— */
+    section {
+      padding: 6rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      text-align: center;
+    }
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .two-col.reverse {
+      flex-direction: row-reverse;
+    }
+    .col-text {
+      flex: 1 1 320px;
+    }
+    .col-img {
+      flex: 1 1 320px;
+      text-align: center;
+    }
+    .placeholder-img {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4/3;
+      background: #e5e7eb;
+      border-radius: 1rem;
+    }
+
+    /* ——— SUBMISSIONS GRID ——— */
+    .submissions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .submission-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1.25rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .submission-card a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ——— FOOTER ——— */
+    footer {
+      background: #ffffff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* ——— RESPONSIVE NAV (Toggle) —— */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* for brevity: hide nav links on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Heba Metwally</div>
+    <ul class="nav-links">
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#about-course">About Course</a></li>
+      <li><a href="#submissions">Submissions</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Generative AI<br />for Work & Research Portfolio</h1>
+    <p>Showcasing my journey through an 8‑week certification on harnessing AI tools to automate and elevate professional workflows.</p>
+    <a href="#about-me"><button class="cta-btn">Explore My Work</button></a>
+  </header>
+
+  <!-- ABOUT ME -->
+  <section id="about-me">
+    <h2 class="section-title">About Me</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>Hello! I’m <strong>Heba Metwally</strong>, a Public Health researcher with a passion for leveraging technology to accelerate discovery and improve healthcare outcomes. With experience in data‑driven analysis for decision making, I’m now diving deep into generative AI to streamline knowledge management, automate routine tasks, and communicate science more effectively.</p>
+        <p>Beside Public health, you’ll find me mentoring students, designing infographics, and exploring Egypt’s vibrant art scene.</p>
+      </div>
+      <div class="col-img"><div class="placeholder-img" aria-label="Profile photo placeholder"></div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT COURSE -->
+  <section id="about-course" style="background:#ffffff;">
+    <h2 class="section-title">About the Course</h2>
+    <div class="two-col reverse">
+      <div class="col-text">
+        <h3>Generative AI for Work & Research Productivity</h3>
+        <p>This live, 8‑week online certification focuses on <strong>No‑Code AI Tools</strong> that supercharge productivity. Key learning outcomes include:</p>
+        <ul>
+          <li>Automate document, spreadsheet, and data workflows</li>
+          <li>Organize knowledge & conduct literature reviews with AI</li>
+          <li>Build custom chatbots for projects and teams</li>
+          <li>Create scientific visuals & presentations using AI</li>
+          <li>Apply skills in a hands‑on capstone project</li>
+        </ul>
+        <p>The program is designed for students, faculty, and researchers—no coding prerequisite required—and features live workshops, help sessions, and an active support forum.</p>
+      </div>
+      <div class="col-img"><div class="placeholder-img" aria-label="Course graphic placeholder"></div></div>
+    </div>
+  </section>
+
+  <!-- SUBMISSIONS -->
+  <section id="submissions">
+    <h2 class="section-title">Weekly Submissions</h2>
+    <p style="text-align:center;max-width:680px;margin:0 auto 2.5rem;color:var(--muted);">Links to my weekly projects and reflections will appear below as the course progresses.</p>
+    <div class="submissions-grid">
+      <!-- Example card (keep for structure)—delete or duplicate as needed -->
+      <div class="submission-card">
+        <h4>Week 1 — Prompt Engineering Basics</h4>
+        <p><em>Coming soon</em></p>
+      </div>
+      <div class="submission-card">
+        <h4>Week 2 — Spreadsheet Automation</h4>
+        <p><em>Coming soon</em></p>
+      </div>
+      <div class="submission-card">
+        <h4>Week 3 — Literature Review Assistant</h4>
+        <p><em>Coming soon</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Heba Metwally • All rights reserved.
+  </footer>
+</body>
+</html>
